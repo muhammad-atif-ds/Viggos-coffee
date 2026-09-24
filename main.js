@@ -226,8 +226,13 @@
     const render = () => {
       const mobile = innerWidth < 768;
       const W = media.offsetWidth, H = media.offsetHeight;
-      const w = Math.min(300 + shown * (mobile ? 650 : 1250), W);
-      const h = Math.min(400 + shown * (mobile ? 200 : 400), H);
+      // Start as a 3:4 card sized to the screen (≈55% of a phone's width, 340px max on desktop),
+      // never taller than 60% of the viewport, then grow to the full frame
+      let sw = Math.min(Math.max(innerWidth * 0.55, 200), 340), sh = sw * 4 / 3;
+      if (sh > innerHeight * 0.6) { sh = innerHeight * 0.6; sw = sh * 0.75; }
+      const endH = mobile ? Math.min(600, H) : H;
+      const w = sw + shown * (W - sw);
+      const h = sh + shown * (endH - sh);
       const sx = w / W, sy = h / H, cover = Math.max(sx, sy);
       media.style.transform = `scale(${sx}, ${sy})`;
       media.style.borderRadius = `${16 / sx}px / ${16 / sy}px`;
