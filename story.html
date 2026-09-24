@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our story · Viggo's Coffee</title>
+<script>document.documentElement.classList.add('js')</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2715%27 fill=%27%23111111%27/%3E%3Cpath d=%27M11 10c4 3 6 9 2 13M21 22c-4-3-6-9-2-13%27 stroke=%27%23FFFFFF%27 stroke-width=%272%27 fill=%27none%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="curtain" aria-hidden="true"><span class="curtain-logo"></span></div>
+<div class="progress" aria-hidden="true"></div>
+
+<!-- Torn-edge shape, reused -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="tear" d="M0,40 L0,22 L18,26 L34,17 L52,24 L66,14 L84,21 L101,12 L118,20 L137,15 L152,25 L170,16 L188,22 L205,11 L224,19 L240,14 L258,24 L275,17 L292,21 L310,10 L326,18 L345,15 L362,24 L380,13 L397,20 L415,16 L433,25 L450,14 L468,19 L485,11 L503,22 L520,17 L538,23 L556,12 L573,20 L591,15 L608,24 L626,13 L643,21 L661,16 L679,25 L696,12 L714,19 L731,14 L749,23 L766,17 L784,21 L802,11 L819,20 L837,16 L854,24 L872,13 L890,19 L907,15 L925,23 L942,12 L960,21 L977,17 L995,25 L1013,14 L1030,20 L1048,11 L1065,22 L1083,16 L1100,24 L1118,13 L1136,19 L1153,15 L1171,23 L1188,17 L1200,20 L1200,40 Z"/>
+    <symbol id="bean" viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="4" ry="6" transform="rotate(30 8 8)" fill="currentColor"/><path d="M5.5 4c2.2 2 2.2 6 5 8" stroke="#111111" stroke-width="1.1" fill="none"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="logo" aria-label="Viggo's Specialty Coffeebar, home"><span class="logo-img" aria-hidden="true"></span></a>
+    <span class="brand-script script">Coffee</span>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" class="link">Home</a>
+      <a href="blog.html" class="link">Blog</a>
+      <a href="menu.html" class="link">Menu</a>
+      <a href="story.html" class="link" aria-current="page">Story</a>
+      <a href="contact.html" class="link">Contact</a>
+    </nav>
+    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="drawer" id="drawer" aria-label="Mobile">
+  <a href="index.html" style="--i:0">Home</a>
+  <a href="blog.html" style="--i:1">Blog</a>
+  <a href="menu.html" style="--i:2">Menu</a>
+  <a href="story.html" style="--i:3" aria-current="page">Story</a>
+  <a href="contact.html" style="--i:4">Contact</a>
+  <small>De Coninckplein 21 · Antwerp</small>
+</nav>
+
+
+<section class="page-hero">
+  <img class="hero-img" data-parallax="0.3" src="images/bar-counter.jpg" alt="Viggo's bar counter under a row of hanging bulbs">
+  <div class="hero-tint"></div>
+  <div class="hero-shade"></div>
+  <div class="copy"><div class="wrap">
+    <span class="eyebrow load-fade" style="--d:.3s">Our story</span>
+    <h1 class="serif"><span class="line"><span style="--i:0">Specialty coffee</span></span><span class="line"><em style="--i:1">in Antwerp since 2012</em></span></h1>
+    <p class="load-fade" style="--d:.9s">Espresso, filter and latte art on De Coninckplein.</p>
+  </div></div>
+  <svg class="torn bottom" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><use href="#tear" fill="#FFFFFF"/></svg>
+</section>
+
+<main class="grain" style="position:relative">
+  <section class="section">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="pull" data-reveal>Good coffee, a long wooden table, and a few Star Wars helmets keeping watch behind the bar.</p>
+          <p class="body" data-reveal style="--d:150ms">Viggo's opened on De Coninckplein in 2012 as a specialty coffee bar. It has been a daily stop for the neighbourhood ever since: a quick espresso on the way to work, lunch at the big table, or a slow Sunday latte on the terrace.</p>
+          <p class="body" data-reveal style="--d:250ms">And yes, take a good look at the espresso machine. It has company.</p>
+        </div>
+        <div class="frame tall" data-reveal="img" style="--d:150ms">
+          <img data-parallax="0.06" src="images/espresso-machine.jpg" alt="Viggo's espresso machine with a row of Star Wars helmets">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div style="text-align:center; margin-bottom: var(--s6)">
+        <span class="eyebrow" data-reveal>A day at Viggo's</span>
+        <h2 class="h2" data-reveal style="--d:100ms">From first espresso <em>to last pour</em></h2>
+      </div>
+      <div class="timeline">
+        <span class="fill" aria-hidden="true"></span>
+        <div class="t-item" data-reveal="right"><div class="yr">08:00</div><h3>Doors open</h3><p>The first espressos go out to people on their way to work, Monday to Friday.</p></div>
+        <div class="t-item" data-reveal="left"><div class="yr">10:00</div><h3>Sunday mornings</h3><p>On Sundays we open a little later, for slow mornings and long breakfasts.</p></div>
+        <div class="t-item" data-reveal="right"><div class="yr">12:30</div><h3>Lunch at the long table</h3><p>Midday is when the big table fills up. Grab a seat by the window.</p></div>
+        <div class="t-item" data-reveal="left"><div class="yr">15:00</div><h3>Afternoon pick-me-up</h3><p>A flat white and a croissant to get you through the rest of the day.</p></div>
+        <div class="t-item" data-reveal="right"><div class="yr">17:00</div><h3>Last pour</h3><p>Doors close at five. See you tomorrow.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-band">
+    <div class="wrap">
+      <div class="stats" data-reveal>
+        <div class="stat"><b data-count="14">0</b><span>Years in Antwerp</span></div>
+        <div class="stat"><b data-count="6">0</b><span>Days a week</span></div>
+        <div class="stat"><b data-count="9">0</b><span>Hours every weekday</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow" data-reveal>What we care about</span>
+          <h2 class="h2" data-reveal style="--d:100ms">Three things <em>we won't compromise on</em></h2>
+        </div>
+      </div>
+      <div class="values">
+        <article class="value" data-reveal style="--d:0ms">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 26c10 0 20-8 20-20C14 6 6 14 6 26zM6 26l12-12"/></svg>
+          <h3>Specialty beans</h3><p>We only pour coffee we'd happily drink every day, and we change it up through the year.</p>
+        </article>
+        <article class="value" data-reveal style="--d:120ms">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="16" cy="16" r="11"/><path d="M11 10c4 3 6 9 2 13M21 22c-4-3-6-9-2-13"/></svg>
+          <h3>Made to order</h3><p>Every drink is made by hand, one at a time, with milk steamed just for your cup.</p>
+        </article>
+        <article class="value" data-reveal style="--d:240ms">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 10h16l-2 16H10zM6 10h20M13 6h6"/></svg>
+          <h3>A neighbourhood spot</h3><p>A long table, big windows and a terrace on De Coninckplein. Stay as long as you like.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow" data-reveal>Around the café</span>
+          <h2 class="h2" data-reveal style="--d:100ms">A few of <em>our favourite corners</em></h2>
+        </div>
+      </div>
+      <div class="mosaic">
+        <figure data-reveal="img"><img src="images/interior.jpg" alt="Long wooden table inside Viggo's"></figure>
+        <figure data-reveal="img" style="--d:80ms"><img src="images/latte-trio.jpg" alt="Three lattes with latte art"></figure>
+        <figure data-reveal="img" style="--d:160ms"><img src="images/bear-latte.jpg" alt="Latte with a bear drawn in the foam"></figure>
+        <figure data-reveal="img" style="--d:240ms"><img src="images/terrace.jpg" alt="Viggo's terrace"></figure>
+        <figure data-reveal="img" style="--d:120ms"><img src="images/cup-stack.jpg" alt="Stacked coffee cups"></figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <svg class="torn top" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><use href="#tear" fill="#111111"/></svg>
+  <div class="inner">
+    <span class="serif">Mon – Fri 8 – 17h · Sun 10 – 17h<br><small style="font-family:Jost,sans-serif;opacity:.7;font-size:11px;letter-spacing:.04em">Viggoskar BV · BE 1007.700.831</small></span>
+    <div class="mid">
+      <a href="contact.html#hours" class="link">Opening hours</a>
+      <a href="contact.html#book" class="link">Book a table</a>
+      <span class="go" aria-hidden="true"></span>
+    </div>
+    <div class="socials">
+      <a href="#" class="link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6c0-1 .5-1.5 1.5-1.5H17V1h-3c-3 0-4 2-4 4.5V8H7v3.5h3V23h4V11.5h3l.5-3.5z"/></svg>Facebook</a>
+      <a href="#" class="link" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 4.5a9 9 0 0 1-2.6.7 4.5 4.5 0 0 0 2-2.5 9 9 0 0 1-2.9 1.1A4.5 4.5 0 0 0 11.8 7.9 12.8 12.8 0 0 1 2.5 3.2a4.5 4.5 0 0 0 1.4 6 4.5 4.5 0 0 1-2-.6 4.5 4.5 0 0 0 3.6 4.5 4.5 4.5 0 0 1-2 .1 4.5 4.5 0 0 0 4.2 3.1A9 9 0 0 1 1 18.1 12.8 12.8 0 0 0 7.9 20c8.3 0 12.8-6.9 12.8-12.8v-.6A9 9 0 0 0 23 4.5z"/></svg>Twitter</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

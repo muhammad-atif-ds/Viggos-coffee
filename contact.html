@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact · Viggo's Coffee</title>
+<script>document.documentElement.classList.add('js')</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2715%27 fill=%27%23111111%27/%3E%3Cpath d=%27M11 10c4 3 6 9 2 13M21 22c-4-3-6-9-2-13%27 stroke=%27%23FFFFFF%27 stroke-width=%272%27 fill=%27none%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="curtain" aria-hidden="true"><span class="curtain-logo"></span></div>
+<div class="progress" aria-hidden="true"></div>
+
+<!-- Torn-edge shape, reused -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="tear" d="M0,40 L0,22 L18,26 L34,17 L52,24 L66,14 L84,21 L101,12 L118,20 L137,15 L152,25 L170,16 L188,22 L205,11 L224,19 L240,14 L258,24 L275,17 L292,21 L310,10 L326,18 L345,15 L362,24 L380,13 L397,20 L415,16 L433,25 L450,14 L468,19 L485,11 L503,22 L520,17 L538,23 L556,12 L573,20 L591,15 L608,24 L626,13 L643,21 L661,16 L679,25 L696,12 L714,19 L731,14 L749,23 L766,17 L784,21 L802,11 L819,20 L837,16 L854,24 L872,13 L890,19 L907,15 L925,23 L942,12 L960,21 L977,17 L995,25 L1013,14 L1030,20 L1048,11 L1065,22 L1083,16 L1100,24 L1118,13 L1136,19 L1153,15 L1171,23 L1188,17 L1200,20 L1200,40 Z"/>
+    <symbol id="bean" viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="4" ry="6" transform="rotate(30 8 8)" fill="currentColor"/><path d="M5.5 4c2.2 2 2.2 6 5 8" stroke="#111111" stroke-width="1.1" fill="none"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="logo" aria-label="Viggo's Specialty Coffeebar, home"><span class="logo-img" aria-hidden="true"></span></a>
+    <span class="brand-script script">Coffee</span>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" class="link">Home</a>
+      <a href="blog.html" class="link">Blog</a>
+      <a href="menu.html" class="link">Menu</a>
+      <a href="story.html" class="link">Story</a>
+      <a href="contact.html" class="link" aria-current="page">Contact</a>
+    </nav>
+    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="drawer" id="drawer" aria-label="Mobile">
+  <a href="index.html" style="--i:0">Home</a>
+  <a href="blog.html" style="--i:1">Blog</a>
+  <a href="menu.html" style="--i:2">Menu</a>
+  <a href="story.html" style="--i:3">Story</a>
+  <a href="contact.html" style="--i:4" aria-current="page">Contact</a>
+  <small>De Coninckplein 21 · Antwerp</small>
+</nav>
+
+
+<section class="page-hero">
+  <img class="hero-img" data-parallax="0.3" src="images/interior.jpg" alt="Long wooden table inside Viggo's">
+  <div class="hero-tint"></div>
+  <div class="hero-shade"></div>
+  <div class="copy"><div class="wrap">
+    <span class="eyebrow load-fade" style="--d:.3s">Contact</span>
+    <h1 class="serif"><span class="line"><span style="--i:0">Save a seat,</span></span><span class="line"><em style="--i:1">or just say hello</em></span></h1>
+    <p class="load-fade" style="--d:.9s">Book a table, ask about events or just say hello.</p>
+  </div></div>
+  <svg class="torn bottom" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><use href="#tear" fill="#FFFFFF"/></svg>
+</section>
+
+<main class="grain" style="position:relative">
+  <section id="book" class="section">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="panel" data-reveal>
+          <span class="eyebrow">Send us a message</span>
+          <h2 class="h2" style="font-size:34px; margin-bottom: var(--s4)">How can we <em>help?</em></h2>
+          <form data-validate data-success="Thanks. We've got your message and will reply within one working day." novalidate>
+            <div class="form-grid">
+              <div class="field"><label for="c-name">Name</label><input id="c-name" name="name" required autocomplete="name"><span class="err"></span></div>
+              <div class="field"><label for="c-email">Email</label><input id="c-email" type="email" name="email" required autocomplete="email"><span class="err"></span></div>
+              <div class="field"><label for="c-reason">Reason</label>
+                <select id="c-reason" name="reason">
+                  <option>Book a table</option><option>Catering or events</option><option>Wholesale beans</option><option>Something else</option>
+                </select><span class="err"></span></div>
+              <div class="field"><label for="c-date">Date (optional)</label><input id="c-date" type="date" name="date"><span class="err"></span></div>
+              <div class="field full"><label for="c-msg">Message</label><textarea id="c-msg" name="message" required placeholder="Party size, time, anything we should know"></textarea><span class="err"></span></div>
+            </div>
+            <button type="submit" class="pill" style="margin-top:8px">Send message <span class="arrow">→</span></button>
+            <p class="form-status" role="status"></p>
+          </form>
+        </div>
+        <aside id="hours" class="info-card" data-reveal="right" style="--d:150ms">
+          <h3>Find us</h3>
+          <address class="address">De Coninckplein 21<br>2060 Antwerp, Belgium</address>
+          <p style="margin:18px 0 0; font-size:14px"><a href="https://viggos.coffee" class="link" target="_blank" rel="noopener">viggos.coffee</a></p>
+          <ul class="hours">
+            <li data-days="1,2,3,4,5"><span>Monday – Friday</span><span>8 – 17h</span></li>
+            <li data-days="6"><span>Saturday</span><span>Closed</span></li>
+            <li data-days="0"><span>Sunday</span><span>10 – 17h</span></li>
+          </ul>
+          <span class="badge" data-open-badge style="position:static; display:inline-flex"><span class="led"></span><span class="txt">Open daily</span></span>
+          <p style="margin:22px 0 0; font-size:12px; color:var(--mute)">Viggoskar BV · BE 1007.700.831</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="split">
+        <div class="frame mid" data-reveal="img">
+          <img data-parallax="0.06" src="images/terrace.jpg" alt="Viggo's terrace on De Coninckplein">
+        </div>
+        <div>
+          <span class="eyebrow" data-reveal>Getting here</span>
+          <h2 class="h2" data-reveal style="--d:100ms">Find us on <em>De Coninckplein</em></h2>
+          <p class="body" data-reveal style="--d:200ms">We're at number 21 on De Coninckplein, 2060 Antwerp. When the weather is good, look for the tables and umbrella out front.</p>
+          <p class="body" data-reveal style="--d:250ms">Antwerpen-Centraal station is a short walk away.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div style="text-align:center; margin-bottom: var(--s5)">
+        <span class="eyebrow" data-reveal>Good to know</span>
+        <h2 class="h2" data-reveal style="--d:100ms">Questions we <em>hear a lot</em></h2>
+      </div>
+      <div class="faq" data-reveal style="--d:150ms">
+        <details><summary>Do I need to book a table?<span class="plus" aria-hidden="true"></span></summary><p>No, most tables are walk-in. We hold a few for bookings on weekends, which is handy for groups of four or more.</p></details>
+        <details><summary>Do you have plant-based milks?<span class="plus" aria-hidden="true"></span></summary><p>Yes: oat, almond and soy, all at no extra cost.</p></details>
+        <details><summary>Can I work from the café?<span class="plus" aria-hidden="true"></span></summary><p>Of course. Wi-Fi is free and there are outlets along the long bar. On weekends we ask laptops to stay at the bar so tables are free for groups.</p></details>
+        <details><summary>Do you cater events?<span class="plus" aria-hidden="true"></span></summary><p>We run a pop-up espresso bar for offices, weddings and markets. Send us a message with the date and headcount and we'll send a quote.</p></details>
+        <details><summary>Can I buy beans for my office?<span class="plus" aria-hidden="true"></span></summary><p>Yes. We deliver weekly or fortnightly within the city, ground to suit your machine.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <svg class="torn top" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><use href="#tear" fill="#111111"/></svg>
+  <div class="inner">
+    <span class="serif">Mon – Fri 8 – 17h · Sun 10 – 17h<br><small style="font-family:Jost,sans-serif;opacity:.7;font-size:11px;letter-spacing:.04em">Viggoskar BV · BE 1007.700.831</small></span>
+    <div class="mid">
+      <a href="contact.html#hours" class="link">Opening hours</a>
+      <a href="contact.html#book" class="link">Book a table</a>
+      <span class="go" aria-hidden="true"></span>
+    </div>
+    <div class="socials">
+      <a href="#" class="link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6c0-1 .5-1.5 1.5-1.5H17V1h-3c-3 0-4 2-4 4.5V8H7v3.5h3V23h4V11.5h3l.5-3.5z"/></svg>Facebook</a>
+      <a href="#" class="link" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 4.5a9 9 0 0 1-2.6.7 4.5 4.5 0 0 0 2-2.5 9 9 0 0 1-2.9 1.1A4.5 4.5 0 0 0 11.8 7.9 12.8 12.8 0 0 1 2.5 3.2a4.5 4.5 0 0 0 1.4 6 4.5 4.5 0 0 1-2-.6 4.5 4.5 0 0 0 3.6 4.5 4.5 4.5 0 0 1-2 .1 4.5 4.5 0 0 0 4.2 3.1A9 9 0 0 1 1 18.1 12.8 12.8 0 0 0 7.9 20c8.3 0 12.8-6.9 12.8-12.8v-.6A9 9 0 0 0 23 4.5z"/></svg>Twitter</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

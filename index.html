@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viggo's Coffee · Antwerp</title>
+<script>document.documentElement.classList.add('js')</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2715%27 fill=%27%23111111%27/%3E%3Cpath d=%27M11 10c4 3 6 9 2 13M21 22c-4-3-6-9-2-13%27 stroke=%27%23FFFFFF%27 stroke-width=%272%27 fill=%27none%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="curtain" aria-hidden="true"><span class="curtain-logo"></span></div>
+<div class="progress" aria-hidden="true"></div>
+
+<!-- Torn-edge shape, reused -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="tear" d="M0,40 L0,22 L18,26 L34,17 L52,24 L66,14 L84,21 L101,12 L118,20 L137,15 L152,25 L170,16 L188,22 L205,11 L224,19 L240,14 L258,24 L275,17 L292,21 L310,10 L326,18 L345,15 L362,24 L380,13 L397,20 L415,16 L433,25 L450,14 L468,19 L485,11 L503,22 L520,17 L538,23 L556,12 L573,20 L591,15 L608,24 L626,13 L643,21 L661,16 L679,25 L696,12 L714,19 L731,14 L749,23 L766,17 L784,21 L802,11 L819,20 L837,16 L854,24 L872,13 L890,19 L907,15 L925,23 L942,12 L960,21 L977,17 L995,25 L1013,14 L1030,20 L1048,11 L1065,22 L1083,16 L1100,24 L1118,13 L1136,19 L1153,15 L1171,23 L1188,17 L1200,20 L1200,40 Z"/>
+    <symbol id="bean" viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="4" ry="6" transform="rotate(30 8 8)" fill="currentColor"/><path d="M5.5 4c2.2 2 2.2 6 5 8" stroke="#111111" stroke-width="1.1" fill="none"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="logo" aria-label="Viggo's Specialty Coffeebar, home"><span class="logo-img" aria-hidden="true"></span></a>
+    <span class="brand-script script">Coffee</span>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" class="link" aria-current="page">Home</a>
+      <a href="blog.html" class="link">Blog</a>
+      <a href="menu.html" class="link">Menu</a>
+      <a href="story.html" class="link">Story</a>
+      <a href="contact.html" class="link">Contact</a>
+    </nav>
+    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="drawer" id="drawer" aria-label="Mobile">
+  <a href="index.html" style="--i:0" aria-current="page">Home</a>
+  <a href="blog.html" style="--i:1">Blog</a>
+  <a href="menu.html" style="--i:2">Menu</a>
+  <a href="story.html" style="--i:3">Story</a>
+  <a href="contact.html" style="--i:4">Contact</a>
+  <small>De Coninckplein 21 · Antwerp</small>
+</nav>
+
+<section class="xhero" data-xhero>
+  <div class="xhero-stage">
+    <div class="xhero-bg"><img src="images/interior.jpg" alt=""><div class="shade"></div></div>
+    <div class="xhero-media"><video muted loop playsinline preload="none" poster="images/latte-trio.jpg" data-src="https://assets.mixkit.co/videos/810/810-720.mp4" data-src-small="https://assets.mixkit.co/videos/810/810-360.mp4" aria-label="A barista pouring latte art into a cup"></video><div class="dim"></div></div>
+    <div class="xhero-title load-fade" style="--d:.4s">
+      <h1 class="serif"><span class="xl">Every cup</span><em class="xl">a little art</em></h1>
+    </div>
+    <div class="xhero-sub load-fade" style="--d:.8s" aria-hidden="true"><span class="xs">Since 2012</span><span class="xs">Scroll to expand</span></div>
+  </div>
+  <div class="xhero-after">
+    <span class="eyebrow">Specialty coffeebar · Antwerp</span>
+    <p>Espresso, filter and latte art, poured by hand at De Coninckplein 21. Pull up a chair or take one to go.</p>
+    <a href="menu.html" class="shiny-cta"><span>See the menu</span></a>
+  </div>
+  <svg class="torn bottom" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><use href="#tear" fill="#FFFFFF"/></svg>
+</section>
+
+<main class="grain" style="position:relative">
+  <section id="highlights" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow" data-reveal>From the bar</span>
+          <h2 class="h2" data-reveal style="--d:100ms">Four cups <em>worth the trip</em></h2>
+        </div>
+        <div data-reveal style="--d:200ms"><a href="menu.html" class="pill ghost">Full menu <span class="arrow">→</span></a></div>
+      </div>
+      <div class="cards">
+        <a href="menu.html" class="card" data-reveal style="--d:0ms">
+          <div class="media"><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=500&h=625" alt="Cappuccino with latte art on a saucer"><span class="tag">Espresso</span></div>
+          <div class="meta"><h3>Cappuccino</h3><span class="price">€4,20</span></div>
+          <p>Espresso under a deep, airy cap of foam</p>
+        </a>
+        <a href="menu.html" class="card" data-reveal style="--d:100ms">
+          <div class="media"><img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&q=80&w=500&h=625" alt="Flat white in a glass"><span class="tag">Espresso</span></div>
+          <div class="meta"><h3>Flat white</h3><span class="price">€4,20</span></div>
+          <p>Double ristretto, velvety whole milk</p>
+        </a>
+        <a href="menu.html" class="card" data-reveal style="--d:200ms">
+          <div class="media"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&q=80&w=500&h=625" alt="Iced latte in a tall glass"><span class="tag">Cold</span></div>
+          <div class="meta"><h3>Iced latte</h3><span class="price">€5,00</span></div>
+          <p>Double shot and cold milk over ice</p>
+        </a>
+        <a href="menu.html" class="card" data-reveal style="--d:300ms">
+          <div class="media"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=500&h=625" alt="Pour-over coffee being brewed"><span class="tag">Filter</span></div>
+          <div class="meta"><h3>V60 pour-over</h3><span class="price">€5,50</span></div>
+          <p>Single origin, brewed to order</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="marquee" aria-label="What we pour">
+    <div class="marquee-track" aria-hidden="true">
+      <span>Espresso <svg><use href="#bean"/></svg> Flat white <svg><use href="#bean"/></svg> Cortado <svg><use href="#bean"/></svg> V60 pour-over <svg><use href="#bean"/></svg> Cold brew <svg><use href="#bean"/></svg> Iced latte <svg><use href="#bean"/></svg> Cardamom bun <svg><use href="#bean"/></svg></span>
+      <span>Espresso <svg><use href="#bean"/></svg> Flat white <svg><use href="#bean"/></svg> Cortado <svg><use href="#bean"/></svg> V60 pour-over <svg><use href="#bean"/></svg> Cold brew <svg><use href="#bean"/></svg> Iced latte <svg><use href="#bean"/></svg> Cardamom bun <svg><use href="#bean"/></svg></span>
+    </div>
+    <p class="sr-only">Espresso, flat white, cortado, V60 pour-over, cold brew, iced latte and cardamom buns.</p>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="split">
+        <div class="frame tall" data-reveal="img">
+          <img data-parallax="0.06" src="images/interior.jpg" alt="Inside Viggo's: a long wooden table by the window">
+        </div>
+        <div>
+          <span class="eyebrow" data-reveal>Since 2012</span>
+          <h2 class="h2" data-reveal style="--d:100ms">Antwerp's specialty <em>coffee bar</em></h2>
+          <p class="body" data-reveal style="--d:200ms">Viggo's has been pouring specialty coffee on De Coninckplein since 2012. Pull up a chair for a slow espresso, or grab a flat white on your way to work.</p>
+          <div class="stats" data-reveal style="--d:250ms">
+            <div class="stat"><b data-count="14">0</b><span>Years on De Coninckplein</span></div>
+            <div class="stat"><b data-count="6">0</b><span>Days a week we're open</span></div>
+            <div class="stat"><b data-count="9">0</b><span>Hours of coffee every weekday</span></div>
+          </div>
+          <div data-reveal style="--d:300ms"><a href="story.html" class="pill ghost">Read our story <span class="arrow">→</span></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section quotes">
+    <div class="wrap" data-slides>
+      <div class="mark" aria-hidden="true" data-reveal>“</div>
+      <div class="slides" data-reveal style="--d:120ms">
+        <figure class="slide"><blockquote>The flat white here is the reason I leave for work fifteen minutes early. Every single day.</blockquote><cite>Hana M. · Regular since 2019</cite></figure>
+        <figure class="slide"><blockquote>They remembered my order on my second visit. The pour-over is bright, clean and nothing like the chains.</blockquote><cite>Daniel R. · Tuesday mornings</cite></figure>
+        <figure class="slide"><blockquote>Warm light, good music and a cardamom bun that sells out by eleven. Get there early.</blockquote><cite>Priya S. · Weekend reader</cite></figure>
+      </div>
+      <div class="dots" role="group" aria-label="Choose a review">
+        <button aria-label="Review 1"></button><button aria-label="Review 2"></button><button aria-label="Review 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="section">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <span class="eyebrow" data-reveal>Visit us</span>
+          <h2 class="h2" data-reveal style="--d:100ms">A table and a cup, <em>waiting for you</em></h2>
+          <ul class="hours" data-reveal style="--d:200ms">
+            <li data-days="1,2,3,4,5"><span>Monday – Friday</span><span>8 – 17h</span></li>
+            <li data-days="6"><span>Saturday</span><span>Closed</span></li>
+            <li data-days="0"><span>Sunday</span><span>10 – 17h</span></li>
+          </ul>
+          <address class="address" data-reveal style="--d:250ms">De Coninckplein 21<br>2060 Antwerp, Belgium</address>
+          <div class="btn-row" data-reveal style="--d:300ms">
+            <a href="contact.html#book" class="pill">Book a table</a>
+            <a href="contact.html" class="pill ghost">Get directions <span class="arrow">→</span></a>
+          </div>
+        </div>
+        <div class="frame mid" data-reveal="img" style="--d:150ms">
+          <img data-parallax="0.06" src="images/terrace.jpg" alt="Viggo's terrace on De Coninckplein">
+          <span class="badge" data-open-badge><span class="led"></span><span class="txt">Open daily</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <svg class="torn top" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><use href="#tear" fill="#111111"/></svg>
+  <div class="inner">
+    <span class="serif">Mon – Fri 8 – 17h · Sun 10 – 17h<br><small style="font-family:Jost,sans-serif;opacity:.7;font-size:11px;letter-spacing:.04em">Viggoskar BV · BE 1007.700.831</small></span>
+    <div class="mid">
+      <a href="contact.html#hours" class="link">Opening hours</a>
+      <a href="contact.html#book" class="link">Book a table</a>
+      <span class="go" aria-hidden="true"></span>
+    </div>
+    <div class="socials">
+      <a href="#" class="link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6c0-1 .5-1.5 1.5-1.5H17V1h-3c-3 0-4 2-4 4.5V8H7v3.5h3V23h4V11.5h3l.5-3.5z"/></svg>Facebook</a>
+      <a href="#" class="link" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 4.5a9 9 0 0 1-2.6.7 4.5 4.5 0 0 0 2-2.5 9 9 0 0 1-2.9 1.1A4.5 4.5 0 0 0 11.8 7.9 12.8 12.8 0 0 1 2.5 3.2a4.5 4.5 0 0 0 1.4 6 4.5 4.5 0 0 1-2-.6 4.5 4.5 0 0 0 3.6 4.5 4.5 4.5 0 0 1-2 .1 4.5 4.5 0 0 0 4.2 3.1A9 9 0 0 1 1 18.1 12.8 12.8 0 0 0 7.9 20c8.3 0 12.8-6.9 12.8-12.8v-.6A9 9 0 0 0 23 4.5z"/></svg>Twitter</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
